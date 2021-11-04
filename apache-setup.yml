@@ -33,7 +33,7 @@
         port: 80/tcp
         permanent: true
         state: enabled
-      notify: restart firewalld service
+      notify: restart firewalld 
 
     - name: Start the apache web server
       service:
@@ -42,7 +42,7 @@
         enabled: yes
 
   handlers:
-    - name: restart firewalld service
+    - name: restart firewalld 
       service:
         name: firewalld
         state: restarted
